@@ -47,6 +47,14 @@ namespace HotelierProject.WebApi
             services.AddScoped<IHotelServiceDal, EfHotelServiceDal>();
             services.AddScoped<IHotelServiceService, HotelServiceManager>();
 
+            services.AddCors(opt =>
+            {
+                opt.AddPolicy("HotelierApiCors", opts =>
+                {
+                    opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -65,6 +73,8 @@ namespace HotelierProject.WebApi
             }
 
             app.UseRouting();
+            
+            app.UseCors("HotelierApiCors");
 
             app.UseAuthorization();
 

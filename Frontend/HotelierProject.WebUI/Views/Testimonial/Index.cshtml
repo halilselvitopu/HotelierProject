@@ -1,0 +1,34 @@
+﻿@model List<TestimonialListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Referans</th>
+        <th>Unvan</th>
+        <th>Açıklama</th>
+        <th>Resim</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+        <th>Detaylar</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+        <td>@item.Id</td>
+        <td>@item.Name</td>
+        <td>@item.Title</td>
+        <td>@item.Description</td>
+        <td>@item.Image</td>
+        <td><a href="/Testimonial/DeleteTestimonial/@item.Id" class="btn mb-1 btn-rounded btn-outline-danger">Sil</td>
+        <td><a href="/Testimonial/UpdateTestionial/@item.Id" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</td>
+        <td><a href="/Testimonial/TestimonialDetails/@item.Id" class="btn mb-1 btn-rounded btn-outline-dark">Detaylar</td>
+        </tr>
+    }
+</table>
+<a href="/Staff/AddStaff/" class="btn btn-info">Yeni Referans Ekle</a>
+
+
