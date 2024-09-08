@@ -1,4 +1,5 @@
 ﻿using HotelierProject.BusinessLayer.Abstract;
+using HotelierProject.DtoLayer.Dtos.RoomDto;
 using HotelierProject.EntityLayer;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,7 @@ namespace HotelierProject.WebApi.Controllers
         [HttpPost]
         public IActionResult AddRoom(Room room)
         {
+
             _roomService.InsertT(room);
              return Ok();
         }

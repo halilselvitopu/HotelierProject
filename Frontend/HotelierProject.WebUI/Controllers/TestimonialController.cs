@@ -34,13 +34,5 @@ namespace HotelierProject.WebUI.Controllers
             return View();  
         }
 
-
-        [HttpPost]
-        public async Task<IActionResult> AddTestimonial()
-        {
-            var client = _httpClientFactory.CreateClient();
-
-
-        }
     }
 }

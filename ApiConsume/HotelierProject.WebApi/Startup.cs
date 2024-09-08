@@ -47,6 +47,8 @@ namespace HotelierProject.WebApi
             services.AddScoped<IHotelServiceDal, EfHotelServiceDal>();
             services.AddScoped<IHotelServiceService, HotelServiceManager>();
 
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddCors(opt =>
             {
                 opt.AddPolicy("HotelierApiCors", opts =>

@@ -1,0 +1,30 @@
+﻿@model List<ResultHotelServiceDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>İkon</th>
+        <th>Hizmet</th>
+        <th>Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Icon</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a href="/HotelService/DeleteHotelService/@item.Id" class="btn mb-1 btn-rounded btn-outline-danger">Sil</a></td>
+            <td><a href="/HotelService/UpdateHotelService/@item.Id" class="btn mb-1 btn-rounded btn-outline-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/HotelService/AddHotelService/" class="btn btn-info">Yeni Hizmet Ekle</a>
+
+

@@ -26,7 +26,6 @@
     <Folder Include="Dtos\NewsletterDto\" />
     <Folder Include="Dtos\TestimonialDto\" />
     <Folder Include="Dtos\StaffDto\" />
-    <Folder Include="Dtos\RoomDto\" />
   </ItemGroup>
 
 </Project>
