@@ -1,4 +1,5 @@
 ﻿using HotelierProject.EntityLayer;
+using HotelierProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -21,5 +22,6 @@ namespace HotelierProject.DataAccessLayer.Concrete
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Newsletter> Newsletters { get; set; }
         public DbSet<Testimonial> Testimonials { get; set; }
+        public DbSet<About> Abouts { get; set; }
     }
 }

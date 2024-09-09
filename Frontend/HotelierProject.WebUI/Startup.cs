@@ -1,5 +1,6 @@
 using HotelierProject.DataAccessLayer.Concrete;
 using HotelierProject.EntityLayer;
+using HotelierProject.EntityLayer.Concrete;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

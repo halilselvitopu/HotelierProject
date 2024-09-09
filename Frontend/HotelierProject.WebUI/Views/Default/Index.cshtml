@@ -1,0 +1,68 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("HeadComponent")
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        @await Component.InvokeAsync("SpinnerComponent")
+        
+        <!-- Spinner End -->
+        <!-- Header Start -->
+        @await Component.InvokeAsync("NavbarComponent")
+        
+        <!-- Header End -->
+        <!-- Carousel Start -->
+        @await Component.InvokeAsync("CarouselSliderComponent")
+        
+        <!-- Carousel End -->
+        <!-- Booking Start -->
+        @await Component.InvokeAsync("BookingComponent")
+        
+        <!-- Booking End -->
+        <!-- About Start -->
+        @await Component.InvokeAsync("AboutComponent")
+        
+        <!-- About End -->
+        <!-- Room Start -->
+        @await Component.InvokeAsync("RoomComponent")
+        
+        <!-- Room End -->
+        <!-- Video Start -->
+        @await Component.InvokeAsync("TrailerComponent")
+        <!-- Video Start -->
+        <!-- Service Start -->
+        @await Component.InvokeAsync("HotelServiceComponent")
+        
+        <!-- Service End -->
+        <!-- Testimonial Start -->
+        @await Component.InvokeAsync("TestimonialComponent")
+        
+        <!-- Testimonial End -->
+        <!-- Team Start -->
+        @await Component.InvokeAsync("StaffComponent")
+        
+        <!-- Team End -->
+        <!-- Newsletter Start -->
+        @await Html.PartialAsync("NewsletterPartial.cshtml")
+        
+        <!-- Newsletter Start -->
+        <!-- Footer Start -->
+        @await Component.InvokeAsync("FooterComponent")
+        
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    @await Component.InvokeAsync("ScriptsComponent")
+</body>
+
+</html>

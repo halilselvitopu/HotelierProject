@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HotelierProject.EntityLayer
+namespace HotelierProject.EntityLayer.Concrete
 {
     public class AppRole : IdentityRole<int>
     {
