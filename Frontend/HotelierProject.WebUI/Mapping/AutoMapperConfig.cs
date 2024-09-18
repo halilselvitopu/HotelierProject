@@ -8,6 +8,9 @@ using HotelierProject.WebUI.Dtos.NewsletterDto;
 using HotelierProject.WebUI.Dtos.RoomDto;
 using HotelierProject.WebUI.Dtos.StaffDto;
 using HotelierProject.WebUI.Dtos.TestimonialDto;
+using HotelierProject.WebUI.Dtos.BookingDto;
+using HotelierProject.WebUI.Dtos.AdminBookingDto;
+using HotelierProject.WebUI.Dtos.ContactDto;
 
 namespace HotelierProject.WebUI.Mapping
 {
@@ -32,6 +35,17 @@ namespace HotelierProject.WebUI.Mapping
                CreateMap<ResultStaffDto, Staff>().ReverseMap();
 
                CreateMap<CreateNewsletterDto, Newsletter>().ReverseMap();
+
+               CreateMap<CreateBookingDto, Booking>().ReverseMap();
+
+               CreateMap<ResultAdminBookingDto, Booking>().ReverseMap();
+
+               CreateMap<ApproveBookingDto, Booking>().ReverseMap();
+
+               CreateMap<CreateContactDto, Contact>().ReverseMap();
+             
+
+
 
               
   

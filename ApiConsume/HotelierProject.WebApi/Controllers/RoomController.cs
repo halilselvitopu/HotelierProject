@@ -32,7 +32,7 @@ namespace HotelierProject.WebApi.Controllers
              return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public IActionResult DeleteRoom(int id)
         {
             var values = _roomService.GetByIdT(id);

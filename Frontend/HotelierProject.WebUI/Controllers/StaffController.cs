@@ -20,7 +20,7 @@ namespace HotelierProject.WebUI.Controllers
         public async Task<IActionResult> Index()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("http://localhost:27314/api/Staff");
+            var responseMessage = await client.GetAsync("http://localhost:27314/api/Staff"); 
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
@@ -42,7 +42,7 @@ namespace HotelierProject.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(model);
             StringContent stringContent = new StringContent(jsonData,Encoding.UTF8,"application/json");
-            var responseMessage = await client.PostAsync("http://localhost:27314/api/Staff",stringContent);
+            var responseMessage = await client.PostAsync("http://localhost:27314/api/Staff", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");

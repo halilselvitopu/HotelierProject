@@ -47,7 +47,7 @@ namespace HotelierProject.WebUI.Controllers
             var client = _httpClientFactory.CreateClient();
             var jsonData = JsonConvert.SerializeObject(createHotelServiceDto);
             StringContent stringContent = new StringContent(jsonData,Encoding.UTF8,"application/json");
-            var responseMessage = await client.PostAsync("http://localhost:27314/api/HotelService",stringContent);
+            var responseMessage = await client.PostAsync("http://localhost:27314/api/HotelService", stringContent);
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
