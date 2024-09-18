@@ -11,6 +11,7 @@ using HotelierProject.WebUI.Dtos.TestimonialDto;
 using HotelierProject.WebUI.Dtos.BookingDto;
 using HotelierProject.WebUI.Dtos.AdminBookingDto;
 using HotelierProject.WebUI.Dtos.ContactDto;
+using HotelierProject.WebUI.Dtos.GuestDto;
 
 namespace HotelierProject.WebUI.Mapping
 {
@@ -43,6 +44,10 @@ namespace HotelierProject.WebUI.Mapping
                CreateMap<ApproveBookingDto, Booking>().ReverseMap();
 
                CreateMap<CreateContactDto, Contact>().ReverseMap();
+
+               CreateMap<CreateGuestDto, Guest>().ReverseMap();
+
+               CreateMap<UpdateGuestDto, Guest>().ReverseMap();
              
 
 
