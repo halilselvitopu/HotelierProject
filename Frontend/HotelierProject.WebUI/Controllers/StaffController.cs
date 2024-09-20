@@ -24,7 +24,7 @@ namespace HotelierProject.WebUI.Controllers
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<StaffListViewModel>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ContactResultDto>>(jsonData);
                 return View(values);
             }
             return View();

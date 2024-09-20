@@ -1,4 +1,4 @@
-﻿using HotelierProject.BusinessLayer.Abstract;
+﻿ using HotelierProject.BusinessLayer.Abstract;
 using HotelierProject.DataAccessLayer.Abstract;
 using HotelierProject.EntityLayer.Concrete;
 using System;

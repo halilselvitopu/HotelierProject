@@ -19,11 +19,25 @@ namespace HotelierProject.WebApi.Controllers
 
         [HttpPost]
 
-        public IActionResult SendMessage(Contact contact) 
+        public IActionResult SendMessage(Contact contact)
         {
             contact.Date = Convert.ToDateTime(DateTime.Now.ToString());
             _contactService.InsertT(contact);
             return Ok();
+        }
+
+        [HttpGet]
+        public IActionResult GetContactInboxList()
+        {
+            var values =  _contactService.GetListT();
+            return Ok(values);
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult GetMessageDetailsById(int id)
+        {
+            var values = _contactService.GetByIdT(id);
+            return Ok(values);
         }
     }
 }

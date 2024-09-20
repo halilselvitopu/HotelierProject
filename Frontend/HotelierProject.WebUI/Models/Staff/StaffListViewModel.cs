@@ -1,6 +1,6 @@
 ﻿namespace HotelierProject.WebUI.Models.Staff
 {
-    public class StaffListViewModel
+    public class ContactResultDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
