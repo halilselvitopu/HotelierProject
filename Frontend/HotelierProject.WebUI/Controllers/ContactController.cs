@@ -1,4 +1,5 @@
 ﻿using HotelierProject.WebUI.Dtos.ContactDto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelierProject.WebUI.Controllers
 {
+    [AllowAnonymous]
     public class ContactController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
