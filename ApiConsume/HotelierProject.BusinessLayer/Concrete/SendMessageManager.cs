@@ -28,6 +28,11 @@ namespace HotelierProject.BusinessLayer.Concrete
             return _sendMessageDal.GetById(id);
         }
 
+        public int GetContactCountT()
+        {
+            return _sendMessageDal.GetSendMessageCount();
+        }
+
         public List<SendMessage> GetListT()
         {
             return _sendMessageDal.GetAll();
