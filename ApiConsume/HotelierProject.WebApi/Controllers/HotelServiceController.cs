@@ -9,7 +9,7 @@ namespace HotelierProject.WebApi.Controllers
     [ApiController]
     public class HotelServiceController : ControllerBase
     {
-        IHotelServiceService _hotelService;
+         private readonly IHotelServiceService _hotelService;
 
         public HotelServiceController(IHotelServiceService hotelService)
         {

@@ -1,8 +1,12 @@
-﻿using HotelierProject.EntityLayer;
+﻿using HotelierProject.EntityLayer.Concrete;
 using HotelierProject.WebUI.Dtos.AppUserDto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace HotelierProject.WebUI.Controllers
@@ -32,10 +36,12 @@ namespace HotelierProject.WebUI.Controllers
             }
             var AppUser = new AppUser()
             {
+
                 Name = createNewAppUserDto.Name,
                 Email = createNewAppUserDto.Mail,
                 Surname = createNewAppUserDto.Surname,
-                UserName = createNewAppUserDto.Username
+                UserName = createNewAppUserDto.Username,
+                WorkLocationId = 1
             };
             var result  = await _userManager.CreateAsync(AppUser,createNewAppUserDto.Password);
             if (result.Succeeded)

@@ -1,4 +1,4 @@
-﻿using HotelierProject.EntityLayer;
+﻿using HotelierProject.EntityLayer.Concrete;
 using HotelierProject.WebUI.Dtos.AppUserDto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -31,7 +31,7 @@ namespace HotelierProject.WebUI.Controllers
                 var result = await _signInManager.PasswordSignInAsync(loginAppUserDto.Username,loginAppUserDto.Password,false,false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Default");
+                    return RedirectToAction("Index", "AdminStaff");
                 }
                 else
                 {

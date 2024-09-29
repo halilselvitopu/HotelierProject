@@ -48,6 +48,8 @@ namespace HotelierProject.WebUI.Mapping
                CreateMap<CreateGuestDto, Guest>().ReverseMap();
 
                CreateMap<UpdateGuestDto, Guest>().ReverseMap();
+
+               CreateMap<ResultAppUserDto, AppUser>().ReverseMap();
              
 
 

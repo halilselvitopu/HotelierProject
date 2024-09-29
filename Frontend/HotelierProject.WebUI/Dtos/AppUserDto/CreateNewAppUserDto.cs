@@ -22,5 +22,6 @@ namespace HotelierProject.WebUI.Dtos.AppUserDto
         [Required(ErrorMessage = "Lütfen şifrenizi tekrar giriniz.")]
         [Compare("Password",ErrorMessage = "Girilen şifreler eşleşmiyor.")]
         public string ConfirmPassword { get; set; }
+
     }
 }
