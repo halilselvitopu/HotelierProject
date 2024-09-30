@@ -33,6 +33,11 @@ namespace HotelierProject.BusinessLayer.Concrete
             return _appUserDal.GetAll();
         }
 
+        public List<AppUser> GetUsersWithLocationsT()
+        {
+            return _appUserDal.GetUsersWithLocations();
+        }
+
         public List<AppUser> GetUsersWithLocationT()
         {
            return _appUserDal.GetUsersWithLocation();
