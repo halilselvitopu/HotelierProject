@@ -16,5 +16,7 @@ namespace HotelierProject.EntityLayer.Concrete
         public string WorkDepartment { get; set; }
         public int WorkLocationId { get; set; }
         public WorkLocation WorkLocation { get; set; }
+        public string Country { get; set; }
+        public string Gender { get; set; }
     }
 }
