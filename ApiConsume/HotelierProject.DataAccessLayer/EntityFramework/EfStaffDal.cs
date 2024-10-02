@@ -22,5 +22,11 @@ namespace HotelierProject.DataAccessLayer.EntityFramework
             var value = context.Staffs.Count();
             return value;
         }
+
+        public List<Staff> LastStaffList()
+        {
+            using var context = new Context();
+            return context.Staffs.OrderByDescending(x => x.Id).Take(4).ToList();
+        }
     }
 }

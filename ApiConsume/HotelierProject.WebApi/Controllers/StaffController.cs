@@ -51,5 +51,12 @@ namespace HotelierProject.WebApi.Controllers
             var values = _staffService.GetByIdT(id);
             return Ok(values);
         }
+
+        [HttpGet("LastStaffList")]
+        public IActionResult LastStaffList()
+        {
+            var values = _staffService.LastStaffListT();
+            return Ok(values);
+        }
     }
 }

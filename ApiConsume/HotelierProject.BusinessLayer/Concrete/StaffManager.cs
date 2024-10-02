@@ -43,6 +43,11 @@ namespace HotelierProject.BusinessLayer.Concrete
             _staffDal.Insert(t);
         }
 
+        public List<Staff> LastStaffListT()
+        {
+            return _staffDal.LastStaffList();
+        }
+
         public void UpdateT(Staff t)
         {
             _staffDal.Update(t);

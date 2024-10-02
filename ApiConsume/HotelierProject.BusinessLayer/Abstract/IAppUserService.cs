@@ -11,5 +11,6 @@ namespace HotelierProject.BusinessLayer.Abstract
     {
         List<AppUser> GetUsersWithLocationT();
         List<AppUser> GetUsersWithLocationsT();
+        public int GetAppUserCountT();
     }
 }

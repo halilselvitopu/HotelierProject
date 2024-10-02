@@ -52,5 +52,10 @@ namespace HotelierProject.BusinessLayer.Concrete
         {
             _bookingDal.Update(t);  
         }
+
+        public int GetBookingCountT()
+        {
+            return _bookingDal.GetBookingCount();
+        }
     }
 }

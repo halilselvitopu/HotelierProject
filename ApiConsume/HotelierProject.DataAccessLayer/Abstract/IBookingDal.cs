@@ -11,5 +11,6 @@ namespace HotelierProject.DataAccessLayer.Abstract
     {
         void ChangeBookingStatusToApproved(Booking booking);
         void ChangeBookingStatusToApproved2(int id);
+        int GetBookingCount();
     }
 }
