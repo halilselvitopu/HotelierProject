@@ -33,6 +33,11 @@ namespace HotelierProject.BusinessLayer.Concrete
             return _staffDal.GetAll();
         }
 
+        public int GetStaffCountT()
+        {
+            return _staffDal.GetStaffCount();
+        }
+
         public void InsertT(Staff t)
         {
             _staffDal.Insert(t);
