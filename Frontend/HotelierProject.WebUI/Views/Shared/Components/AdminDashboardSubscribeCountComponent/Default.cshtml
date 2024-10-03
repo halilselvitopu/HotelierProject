@@ -1,10 +1,33 @@
-﻿
+﻿<!-- Öncelikle head bölümüne güncel Font Awesome CDN'ini ekleyin -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Ardından style ekleyin -->
+<style>
+    .widget-instagram {
+        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+        color: white;
+    }
+
+    .social-graph-wrapper {
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        color: #ffffff;
+    }
+
+    .s-icon {
+        font-size: 24px;
+        position: relative;
+        padding: 10px;
+    }
+</style>
 
 <div class="row">
+    <!-- Facebook Card -->
     <div class="col-lg-3 col-sm-6">
         <div class="card">
             <div class="social-graph-wrapper widget-facebook">
-                <span class="s-icon"><i class="fa fa-facebook"></i></span>
+                <span class="s-icon"><i class="fab fa-facebook"></i></span>
             </div>
             <div class="row">
                 <div class="col-6 border-right">
@@ -22,64 +45,70 @@
             </div>
         </div>
     </div>
+
+    <!-- LinkedIn Card -->
     <div class="col-lg-3 col-sm-6">
         <div class="card">
             <div class="social-graph-wrapper widget-linkedin">
-                <span class="s-icon"><i class="fa fa-linkedin"></i></span>
+                <span class="s-icon"><i class="fab fa-linkedin"></i></span>
             </div>
             <div class="row">
                 <div class="col-6 border-right">
                     <div class="pt-3 pb-3 pl-0 pr-0 text-center">
                         <h4 class="m-1">89k</h4>
-                        <p class="m-0">Friends</p>
+                        <p class="m-0">Takip Edilenler</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="pt-3 pb-3 pl-0 pr-0 text-center">
                         <h4 class="m-1">119k</h4>
-                        <p class="m-0">Followers</p>
+                        <p class="m-0">Takipçiler</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Instagram Card -->
     <div class="col-lg-3 col-sm-6">
         <div class="card">
-            <div class="social-graph-wrapper widget-googleplus">
-                <span class="s-icon"><i class="fa fa-google-plus"></i></span>
+            <div class="social-graph-wrapper widget-instagram">
+                <span class="s-icon"><i class="fab fa-instagram"></i></span>
             </div>
             <div class="row">
                 <div class="col-6 border-right">
                     <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                        <h4 class="m-1">89k</h4>
-                        <p class="m-0">Friends</p>
+                        <h4 class="m-1"> @ViewBag.followingCount</h4>
+                        <p class="m-0">Takip Edilenler</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="pt-3 pb-3 pl-0 pr-0 text-center">
-                        <h4 class="m-1">119k</h4>
-                        <p class="m-0">Followers</p>
+                        <h4 class="m-1">@ViewBag.followersCount</h4>
+                        <p class="m-0">Takipçiler</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Twitter Card -->
     <div class="col-lg-3 col-sm-6">
         <div class="card">
             <div class="social-graph-wrapper widget-twitter">
-                <span class="s-icon"><i class="fa fa-twitter"></i></span>
+                <span class="s-icon"><i class="fab fa-twitter"></i></span>
             </div>
             <div class="row">
                 <div class="col-6 border-right">
                     <div class="pt-3 pb-3 pl-0 pr-0 text-center">
                         <h4 class="m-1">89k</h4>
-                        <p class="m-0">Friends</p>
+                        <p class="m-0">Takip Edilenler</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="pt-3 pb-3 pl-0 pr-0 text-center">
                         <h4 class="m-1">119k</h4>
-                        <p class="m-0">Followers</p>
+                        <p class="m-0">Takipçiler</p>
                     </div>
                 </div>
             </div>
