@@ -57,5 +57,10 @@ namespace HotelierProject.BusinessLayer.Concrete
         {
             return _bookingDal.GetBookingCount();
         }
+
+        public List<Booking> GetLastBookingsT()
+        {
+            return _bookingDal.GetLastBookings();
+        }
     }
 }

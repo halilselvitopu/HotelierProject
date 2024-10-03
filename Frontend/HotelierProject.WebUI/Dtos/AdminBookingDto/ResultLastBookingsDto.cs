@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace HotelierProject.EntityLayer.Concrete
+namespace HotelierProject.WebUI.Dtos.AdminBookingDto
 {
-    public class Booking
+    public class ResultLastBookingsDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
