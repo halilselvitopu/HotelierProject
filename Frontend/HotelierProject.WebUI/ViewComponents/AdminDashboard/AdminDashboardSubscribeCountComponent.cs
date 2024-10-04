@@ -12,7 +12,7 @@ namespace HotelierProject.WebUI.ViewComponents.AdminDashboard
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            
+
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
@@ -28,12 +28,34 @@ namespace HotelierProject.WebUI.ViewComponents.AdminDashboard
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                ResultInstagramFollowersDto resultInstagramFollowersDto = JsonConvert.DeserializeObject<ResultInstagramFollowersDto>(body);
-                ViewBag.followersCount = resultInstagramFollowersDto.followers;
-                ViewBag.followingCount = resultInstagramFollowersDto.following;
-                return View(resultInstagramFollowersDto);
+                ResultInstagramFollowersDto resultInstagramFollowersDtos = JsonConvert.DeserializeObject<ResultInstagramFollowersDto>(body);
+                ViewBag.followersCount = resultInstagramFollowersDtos.followers;
+                ViewBag.followingCount = resultInstagramFollowersDtos.following;
+
             }
-           
+
+
+            var client2 = new HttpClient();
+            var request2 = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://twitter32.p.rapidapi.com/getProfile?username=microsoft"),
+                Headers =
+    {
+        { "X-RapidAPI-Key", "630ce9cc86msh271c60cffe62d5ep1b514djsn0fe292593744" },
+        { "X-RapidAPI-Host", "twitter32.p.rapidapi.com" },
+    },
+            };
+            using (var response2 = await client2.SendAsync(request2))
+            {
+                response2.EnsureSuccessStatusCode();
+                var body2 = await response2.Content.ReadAsStringAsync();
+                ResultTwitterFollowersDto resultTwittterFollowersDto = JsonConvert.DeserializeObject<ResultTwitterFollowersDto>(body2);
+                ViewBag.v3 = resultTwittterFollowersDto.data.user_info.followers_count;
+                ViewBag.v4 = resultTwittterFollowersDto.data.user_info.friends_count;
+            }
+
+            return View();
         }
     }
 }
