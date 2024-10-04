@@ -43,5 +43,24 @@ namespace HotelierProject.WebUI.Controllers
             }
             return View(assignRoleViewModels);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> AssignRole(List<AssignRoleViewModel> assignRoleViewModel)
+        {
+            var userid = (int)TempData["userid"];
+            var user = _userManager.Users.FirstOrDefault(x => x.Id == userid);
+            foreach (var item in assignRoleViewModel)
+            {
+                if (item.RoleExist)
+                {
+                    await _userManager.AddToRoleAsync(user, item.RoleName);
+                }
+                else
+                {
+                    await _userManager.RemoveFromRoleAsync(user, item.RoleName);
+                }
+            }
+            return RedirectToAction("Index");
+        }
     }
 }
