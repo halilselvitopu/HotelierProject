@@ -31,7 +31,7 @@ namespace HotelierProject.WebUI.Controllers
                 var result = await _signInManager.PasswordSignInAsync(loginAppUserDto.Username,loginAppUserDto.Password,false,false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "AdminStaff");
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {
