@@ -63,5 +63,10 @@ namespace HotelierProject.BusinessLayer.Concrete
         {
             _bookingDal.ChangeBookingStatusToCancel(id);
         }
+
+        public void ChangeBookingStatusToCallT(int id)
+        {
+            _bookingDal.ChangeBookingStatusToCall(id);
+        }
     }
 }

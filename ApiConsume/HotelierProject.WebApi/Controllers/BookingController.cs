@@ -66,12 +66,21 @@ namespace HotelierProject.WebApi.Controllers
             return Ok();
         }
 
+        [HttpGet("CallBooking")]
+        public IActionResult CallBooking(int id)
+        {
+            _bookingService.ChangeBookingStatusToCallT(id);
+            return Ok();
+        }
+
         [HttpGet("GetLastBookings")]
         public ActionResult GetLastBookings()
         {
             var values = _bookingService.GetLastBookingsT();
             return Ok(values);
         }
+
+
 
     }
 }

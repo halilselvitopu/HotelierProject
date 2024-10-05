@@ -2,7 +2,7 @@
 
 namespace HotelierProject.WebUI.Dtos.AdminBookingDto
 {
-    public class ResultLastBookingsDto
+    public class UpdateBookingDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
