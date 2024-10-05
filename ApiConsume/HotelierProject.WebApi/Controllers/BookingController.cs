@@ -52,17 +52,17 @@ namespace HotelierProject.WebApi.Controllers
             return Ok(values);
         }
 
-        [HttpPut("ApproveBooking")]
-        public IActionResult ApproveBooking(Booking booking)
+        [HttpGet("ApproveBooking")]
+        public IActionResult ApproveBooking(int id)
         {
-            _bookingService.ChangeBookingStatusToApprovedT(booking);
+            _bookingService.ChangeBookingStatusToApprovedT(id);
             return Ok();
         }
 
-        [HttpPut("ApproveBooking2")]
-        public IActionResult ApproveBooking2(int id)
+        [HttpGet("CancelBooking")]
+        public IActionResult CancelBooking(int id)
         {
-            _bookingService.ChangeBookingStatusToApprovedT2(id);
+            _bookingService.ChangeBookingStatusToCancelT(id);
             return Ok();
         }
 

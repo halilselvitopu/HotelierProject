@@ -18,14 +18,10 @@ namespace HotelierProject.BusinessLayer.Concrete
             _bookingDal = bookingDal;
         }
 
-        public void ChangeBookingStatusToApprovedT2(int id)
-        {
-           _bookingDal.ChangeBookingStatusToApproved2(id);
-        }
 
-        public void ChangeBookingStatusToApprovedT(Booking booking)
+        public void ChangeBookingStatusToApprovedT(int id)
         {
-           _bookingDal.ChangeBookingStatusToApproved(booking);
+           _bookingDal.ChangeBookingStatusToApproved(id);
         }
 
         public void DeleteT(Booking t)
@@ -61,6 +57,11 @@ namespace HotelierProject.BusinessLayer.Concrete
         public List<Booking> GetLastBookingsT()
         {
             return _bookingDal.GetLastBookings();
+        }
+
+        public void ChangeBookingStatusToCancelT(int id)
+        {
+            _bookingDal.ChangeBookingStatusToCancel(id);
         }
     }
 }

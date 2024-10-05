@@ -9,8 +9,8 @@ namespace HotelierProject.BusinessLayer.Abstract
 {
     public interface IBookingService : IGenericService<Booking>
     {
-        void ChangeBookingStatusToApprovedT(Booking booking);
-        void ChangeBookingStatusToApprovedT2(int id);
+        void ChangeBookingStatusToApprovedT(int id);
+        void ChangeBookingStatusToCancelT(int id);
         int GetBookingCountT();
         List<Booking> GetLastBookingsT();
     }

@@ -32,31 +32,29 @@ namespace HotelierProject.WebUI.Controllers
             
         }
 
-        public async Task<IActionResult> ApproveBooking(ApproveBookingDto approveBookingDto)
+        public async Task<IActionResult> ApproveBooking(int id)
         {
-            approveBookingDto.Status = "Onaylandı";
+   
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(approveBookingDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://localhost:27314/api/Booking/ApproveBooking", stringContent);
+            var responseMessage = await client.GetAsync($"http://localhost:27314/api/Booking/ApproveBooking/?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
-            return View(jsonData);
+            return View();
         }
-        public async Task<IActionResult> ApproveBooking2(ApproveBookingDto approveBookingDto)
+
+        public async Task<IActionResult> CancelBooking(int id)
         {
-            approveBookingDto.Status = "Onaylandı";
+
             var client = _httpClientFactory.CreateClient();
-            var jsonData = JsonConvert.SerializeObject(approveBookingDto);
-            StringContent stringContent = new StringContent(jsonData, Encoding.UTF8, "application/json");
-            var responseMessage = await client.PutAsync("http://localhost:27314/api/Booking/ApproveBooking2", stringContent);
+            var responseMessage = await client.GetAsync($"http://localhost:27314/api/Booking/CancelBooking/?id={id}");
             if (responseMessage.IsSuccessStatusCode)
             {
                 return RedirectToAction("Index");
             }
-            return View(jsonData);
+            return View();
         }
+
     }
 }
